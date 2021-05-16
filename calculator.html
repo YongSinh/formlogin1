@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Calculator using Javascript</title>
+	<link rel="stylesheet" href="css/style-home.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+	<nav>
+		<label class="logo">YongSinh</label>
+		<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="#">Features
+			<i class="fas fa-caret-down"></i>
+		  </a>
+			<ul>
+		<li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+		<li><a href="https://www.w3schools.com/jquery/default.asp">JQuery</a></li>
+		<li><a href="https://www.w3schools.com/js/">Javascript</a></li>
+		<li><a href="calculator.html">Calculator</a></li>
+  </ul>
+  </li>
+  <li><a href="#">Web Design
+			<i class="fas fa-caret-down"></i>
+		  </a>
+			<ul>
+  <li><a href="#">Front End</a></li>
+  <li><a href="#">Back End</a></li>
+  <li><a href="#">Others
+				<i class="fas fa-caret-right"></i>
+			  </a>
+				<ul>
+  <li><a href="#">Links</a></li>
+  <li><a href="#">Works</a></li>
+  <li><a href="#">Status</a></li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="#">Feedback</a></li>
+  <li><a href="table.html">Schedule</a></li>
+  </ul>
+  </nav>
+	  <section></section>
+	
+	<div class="wrapper">
+		<h2>Simple Calculator</h2><br>
+        <label>Input Number 1:</label>
+        <input id="num-one" name="num-one" type="text"><br>
+        <label>Input Number 2:</label> 
+        <input id="num-two" name="num-two" type="text"><br>
+		<br>
+		<input checked id="box1" name="sign-area" type="radio" value="add"><b>+</b> <input id="box2" name="sign-area" type="radio" value="subtract"><b>-</b> <input id="box3" name="sign-area" type="radio" value="multiply"><b>*</b> <input id="box4" name="sign-area" type="radio" value="divide"><b>/</b><br>
+		<br>
+		<button class="button-calculate" onclick="outcome()" type="button">calculate</button>
+		<h1 id="resultArea"></h1>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script>
+	       function outcome() { 
+	           var x = Number(document.getElementById("num-one").value);
+	           var y = Number(document.getElementById("num-two").value);
+	           var z = 0;
+	           
+	           if (document.getElementById("box1").checked){
+	               z = x + y;
+	           }
+	           else if (document.getElementById("box2").checked){ 
+	               z = x - y;
+	           }
+	           else if (document.getElementById("box3").checked){
+	               z = x * y;
+	           }
+	           else{
+	               z = x / y;
+	           }
+	           document.getElementById("resultArea").innerHTML = " Result : "+ String(z);    
+	       } 
+	</script>
+</body>
+</html>
